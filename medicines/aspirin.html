@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calculate the correct Cephalexin dosage for your dog. Learn about uses, precautions, and side effects of Cephalexin for dogs.">
-    <meta name="keywords" content="Cephalexin for dogs, dog antihistamine, pet allergy medicine, Cephalexin dosage calculator">
-    <title>🐾 DosePaws - Cephalexin Dosage Calculator for Dogs | Uses and Precautions</title>
-    <link rel="canonical" href="https://www.dosepaws.com/medicines/cephalexin.html.html">
+    <meta name="description" content="Calculate the correct Aspirin dosage for your dog. Learn about uses, precautions, and side effects of Aspirin for dogs.">
+    <meta name="keywords" content="Aspirin for dogs, dog antihistamine, pet allergy medicine, Aspirin dosage calculator">
+    <title>🐾 DosePaws - Aspirin Dosage Calculator for Dogs | Uses and Precautions</title>
+    <link rel="canonical" href="https://www.dosepaws.com/medicines/aspirin.html.html">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -167,7 +167,7 @@
 
     <main>
         <section class="calculator">
-            <h2>Cephalexin Dosage Calculator for Dogs</h2>
+            <h2>Aspirin Dosage Calculator for Dogs</h2>
             <form id="dosage-form">
                 <label for="weight">Dog's Weight:</label>
                 <div class="input-group">
@@ -182,30 +182,30 @@
         </section>
 
         <article>
-            <h2>About Cephalexin for Dogs 💊🐶</h2>
+            <h2>About Aspirin for Dogs 💊🐶</h2>
             <section>
                 <h3>Description</h3>
-                <p>Cephalexin is an antibiotic commonly used to treat bacterial infections in dogs, such as skin infections and UTIs.</p>
+                <p>Aspirin is an NSAID used for pain relief, inflammation, and fever in dogs, but it should be used with caution.</p>
             </section>
 
             <section>
                 <h3>Dosage</h3>
-                <p>10-15 mg/kg every 8-12 hours</p>
+                <p>10 mg/kg once every 12 hours</p>
             </section>
 
             <section>
                 <h3>Precautions</h3>
-                <p>Complete the full course; use with caution in dogs with kidney disease.</p>
+                <p>Should not be used in dogs with bleeding disorders or ulcers; prolonged use may cause toxicity.</p>
             </section>
 
             <section>
                 <h3>Uses</h3>
-                <p>Bacterial Infections<br>Skin Infections</p>
+                <p>Pain<br>Inflammation<br>Fever</p>
             </section>
 
             <section>
                 <h3>Potential Side Effects</h3>
-                <p>Diarrhea<br>Vomiting<br>Loss Of Appetite</p>
+                <p>Stomach Ulcers<br>Bleeding<br>Kidney Damage</p>
             </section>
         </article>
 
@@ -228,9 +228,9 @@
             }
 
             let weightInKg = unit === 'lbs' ? weight * 0.453592 : weight;
-            let dosageMg = weightInKg * 12.5;
+            let dosageMg = weightInKg * 10.0;
 
-            resultDiv.textContent = `The recommended Cephalexin dosage is: ${dosageMg.toFixed(2)} mg, for a ${weight} ${unit} dog`;
+            resultDiv.textContent = `The recommended Aspirin dosage is: ${dosageMg.toFixed(2)} mg, for a ${weight} ${unit} dog`;
         }
 
         // Add event listeners to input and select elements

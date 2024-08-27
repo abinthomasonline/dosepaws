@@ -185,22 +185,22 @@
             <h2>About Benadryl for Dogs 💊🐶</h2>
             <section>
                 <h3>Description</h3>
-                <p>Benadryl is an antihistamine and is used to treat sneezing, runny nose, itching and other allergies.</p>
+                <p>Benadryl (diphenhydramine) is an antihistamine used to treat allergies, itching, and motion sickness in dogs.</p>
             </section>
 
             <section>
                 <h3>Dosage</h3>
-                <p>1-2 mg/kg every 8-12 hours</p>
+                <p>1 mg/kg every 8-12 hours</p>
             </section>
 
             <section>
                 <h3>Precautions</h3>
-                <p>Avoid in dogs with glaucoma, heart disease, or high blood pressure</p>
+                <p>May cause drowsiness; do not use in dogs with glaucoma or severe heart disease.</p>
             </section>
 
             <section>
                 <h3>Uses</h3>
-                <p>Allergies<br>Anxiety<br>Motion Sickness</p>
+                <p>Allergies<br>Itching<br>Motion Sickness</p>
             </section>
 
             <section>
@@ -228,7 +228,7 @@
             }
 
             let weightInKg = unit === 'lbs' ? weight * 0.453592 : weight;
-            let dosageMg = weightInKg * 1.5;
+            let dosageMg = weightInKg * 1.0;
 
             resultDiv.textContent = `The recommended Benadryl dosage is: ${dosageMg.toFixed(2)} mg, for a ${weight} ${unit} dog`;
         }
