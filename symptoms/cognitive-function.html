@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DosePaws - Cognitive Function Remedies</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="../assets/styles/styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @media (max-width: 640px) {
+            body {
+                padding-bottom: 4rem; /* Add padding to account for bottom navbar */
+            }
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL9M3G91P3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RL9M3G91P3');
+    </script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- Top Banner (visible only on small screens) -->
+    <div id="topBanner" class="fixed top-0 left-0 right-0 bg-white border-b border-gray-300 h-16 flex items-center justify-center shadow-md sm:hidden">
+        <a href="../index.html" class="text-gray-700 flex items-center">
+            <img src="../assets/images/logo.png" alt="DosePaws Logo" class="h-12 w-12">
+            <span class="font-semibold text-xl">DosePaws</span>
+        </a>
+    </div>
+
+    <!-- Top Navbar (hidden on small screens) -->
+    <nav class="bg-white p-2 hidden sm:block shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex space-x-6">
+                <a href="../index.html" class="text-gray-700 flex items-center">
+                    <img src="../assets/images/logo.png" alt="DosePaws Logo" class="h-12 w-12">
+                    <span class="font-semibold text-xl">DosePaws</span>
+                </a>
+                <a href="../index.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="home" class="w-5 h-5 mr-1"></i> Home
+                </a>
+                <a href="../calculator.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="calculator" class="w-5 h-5 mr-1"></i> Calculator
+                </a>
+                <a href="../medicines/index.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="beaker" class="w-5 h-5 mr-1"></i> Medicines
+                </a>
+            </div>
+            <div class="flex space-x-6">
+                <a href="../about.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="info" class="w-5 h-5 mr-1"></i> About
+                </a>
+                <a href="../contact.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="mail" class="w-5 h-5 mr-1"></i> Contact
+                </a>
+            </div>
+        </div>  
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow p-4 container mx-auto mt-16 sm:mt-0">
+        <!-- Wide Card -->
+        <div class="bg-white shadow-md rounded-2xl p-6 mb-8">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <h1 class="text-5xl font-medium text-gray-700 mb-4 sm:mb-0">Remedies for Cognitive Function</h1>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-4">
+                
+        <div class="col-span-1 rounded-lg p-6 border border-green-400 bg-green-50">
+            <h2 class="text-base font-bold mb-3 text-green-900">NATURAL REMEDIES</h2>
+            <ul class="list-disc text-base text-green-800 ml-4">
+                <li class="text-blue-600 hover:underline mb-1"><a href="../medicines/blueberry-powder.html">Blueberry Powder</a></li>
+<li class="text-blue-600 hover:underline mb-1"><a href="../medicines/lions-mane.html">Lions Mane</a></li>
+            </ul>
+        </div>
+        
+                
+        <div class="col-span-1 rounded-lg p-6 hover:border hover:border-gray-400 hover:bg-gray-50 transition-colors duration-300">
+            <h2 class="text-base font-semibold mb-3 text-gray-700">OTC MEDICINES</h2>
+            <ul class="list-disc text-base text-gray-600 ml-4">
+                <li class="text-blue-600 hover:underline mb-1"><a href="../medicines/green-tea-extract.html">Green Tea Extract</a></li>
+            </ul>
+        </div> 
+        
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white p-10 text-center text-sm text-gray-600 shadow-md mt-10">
+        <p>&copy; 2024 DosePaws. All rights reserved.</p>
+        <p>Contact: <a href="mailto:woof@dosepaws.com">woof@dosepaws.com</a></p>
+        <p class="mt-2">Disclaimer: This website is for informational purposes only. Always consult with a veterinarian before administering medication to your pet. ❤️</p>
+    </footer>
+
+    <!-- Bottom Navbar (visible only on small screens) -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white sm:hidden border-t border-gray-300">
+        <div class="flex justify-around items-center h-16">
+            <a href="../index.html" class="text-gray-700 flex flex-col items-center">
+                <i data-lucide="home" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">Home</span>
+            </a>
+            <a href="../calculator.html" class="text-gray-700 flex flex-col items-center">
+                <i data-lucide="calculator" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">Calculator</span>
+            </a>
+            <a href="../medicines/index.html" class="text-gray-700 flex flex-col items-center">
+                <i data-lucide="beaker" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">Medicines</span>
+            </a>
+            <a href="#" class="text-gray-700 flex flex-col items-center" id="moreButton">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">More</span>
+            </a>
+            <div id="moreMenu" class="hidden absolute bottom-16 left-0 right-0 bg-white border border-gray-300 rounded-lg shadow-lg">
+                <a href="../about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
+                <a href="../contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        lucide.createIcons();
+
+        document.getElementById('moreButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            const moreMenu = document.getElementById('moreMenu');
+            moreMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
