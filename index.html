@@ -3,205 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DosePaws offers simple dosage calculators for common OTC dog medicines. Ensure your pet's health with our easy-to-use tools.">
-    <meta name="keywords" content="dog medicine, pet health, dosage calculator, OTC medicine for dogs">
-    <title>🐾 DosePaws - Dose Right, Pawfect Health | Dog Medicine Dosage Calculator</title>
-    <link rel="canonical" href="https://www.dosepaws.com/">
+    <title>DosePaws - Dosage Calculator for Dog Medications</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="./assets/styles/styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: #f0f0f0;
-            color: #333;
+        @media (max-width: 640px) {
+            body {
+                padding-bottom: 4rem; /* Add padding to account for bottom navbar */
+            }
         }
-        h1 {
-            color: #4a4a4a;
-            font-size: 2.5rem;
-            margin-bottom: 0;
-            text-align: center;
-        }
-        .tagline {
-            font-size: 1.2rem;
-            color: #666;
-            margin-top: 5px;
-            text-align: center;
-        }
-        h2 {
-            color: #4a4a4a;
-            text-align: center;
-            font-size: 1.5rem;
-            margin-top: 20px;
-            margin-bottom: 15px;
-        }
-        p {
-            text-align: center;
-            max-width: 600px;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        #index {
+        .search-results {
+            position: absolute;
             width: 100%;
-            max-width: 300px;
-            text-align: center;
-            background-color: #e0e0e0;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 0 auto;
+            background-color: white;
+            border: 1px solid #e2e8f0;
+            border-top: none;
+            border-radius: 0 0 0.375rem 0.375rem;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 10;
         }
-        #index a {
-            display: block;
-            color: #4a4a4a;
-            text-decoration: none;
-            margin: 10px 0;
-            transition: color 0.3s ease;
+        .search-result-item {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
         }
-        #index a:hover {
-            color: #666;
-        }
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .tagline {
-                font-size: 1rem;
-            }
-            h2 {
-                font-size: 1.2rem;
-            }
+        .search-result-item:hover {
+            background-color: #f3f4f6;
         }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL9M3G91P3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RL9M3G91P3');
+    </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL9M3G91P3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- Top Navbar (hidden on small screens) -->
+    <nav class="p-4 hidden sm:block">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex space-x-4">
+                <a href="./index.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="home" class="w-5 h-5 mr-1"></i> Home
+                </a>
+                <a href="./calculator.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="calculator" class="w-5 h-5 mr-1"></i> Calculator
+                </a>
+                <a href="./medicines/index.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="beaker" class="w-5 h-5 mr-1"></i> Medicines
+                </a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="./about.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="info" class="w-5 h-5 mr-1"></i> About
+                </a>
+                <a href="./contact.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="mail" class="w-5 h-5 mr-1"></i> Contact
+                </a>
+            </div>
+        </div>
+    </nav>
 
-  gtag('config', 'G-RL9M3G91P3');
-</script>
-<body>
-    <header>
-        <h1><a href="/" style="text-decoration: none; color: inherit;">🐾 DosePaws</a></h1>
-        <p class="tagline">Dose Right, Pawfect Health</p>
-    </header>
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col items-center justify-center p-4">
+        <!-- Logo and Name -->
+        <div class="text-4xl font-semibold flex items-center text-gray-800">
+            <img src="./assets/images/logo.png" alt="DosePaws Logo" class="-mr-2" width="85" height="85">
+            DosePaws
+        </div>
 
-    <main>
-        <section>
-            <p>DosePaws offers a simple dosage calculator for common OTC dog medicines, ensuring your pet gets the right amount every time. 💊 Keep your dog safe and healthy with our easy-to-use tool. 🐶❤️</p>
-        </section>
-        
-        <section>
-            <h2>Available Medicines</h2>
-            
-            <nav id="index">
-                <a href="/medicines/activated-charcoal.html">Activated Charcoal</a>
-<a href="/medicines/alfalfa.html">Alfalfa</a>
-<a href="/medicines/artichoke-leaf.html">Artichoke Leaf</a>
-<a href="/medicines/ashwagandha.html">Ashwagandha</a>
-<a href="/medicines/aspirin.html">Aspirin</a>
-<a href="/medicines/b-complex-vitamins.html">B-Complex Vitamins</a>
-<a href="/medicines/benadryl.html">Benadryl</a>
-<a href="/medicines/bilberry.html">Bilberry</a>
-<a href="/medicines/bladderwrack.html">Bladderwrack</a>
-<a href="/medicines/blueberry-powder.html">Blueberry Powder</a>
-<a href="/medicines/boswellia.html">Boswellia</a>
-<a href="/medicines/boswellia-serrata.html">Boswellia Serrata</a>
-<a href="/medicines/brewers-yeast.html">Brewers Yeast</a>
-<a href="/medicines/bromelain.html">Bromelain</a>
-<a href="/medicines/burdock-root.html">Burdock Root</a>
-<a href="/medicines/catnip.html">Catnip</a>
-<a href="/medicines/cats-claw.html">Cats Claw</a>
-<a href="/medicines/celery-seed.html">Celery Seed</a>
-<a href="/medicines/cephalexin.html">Cephalexin</a>
-<a href="/medicines/chamomile.html">Chamomile</a>
-<a href="/medicines/chlorella.html">Chlorella</a>
-<a href="/medicines/chlorpheniramine.html">Chlorpheniramine</a>
-<a href="/medicines/cloves.html">Cloves</a>
-<a href="/medicines/coconut-oil.html">Coconut Oil</a>
-<a href="/medicines/coconut-water.html">Coconut Water</a>
-<a href="/medicines/cough-suppressant.html">Cough Suppressant</a>
-<a href="/medicines/cranberry-extract.html">Cranberry Extract</a>
-<a href="/medicines/dhea.html">DHEA</a>
-<a href="/medicines/dandelion-root.html">Dandelion Root</a>
-<a href="/medicines/dramamine.html">Dramamine</a>
-<a href="/medicines/echinacea.html">Echinacea</a>
-<a href="/medicines/elderberry.html">Elderberry</a>
-<a href="/medicines/evening-primrose-oil.html">Evening Primrose Oil</a>
-<a href="/medicines/fenugreek.html">Fenugreek</a>
-<a href="/medicines/fish-oil.html">Fish Oil</a>
-<a href="/medicines/ginger.html">Ginger</a>
-<a href="/medicines/glucosamine.html">Glucosamine</a>
-<a href="/medicines/goldenseal.html">Goldenseal</a>
-<a href="/medicines/green-lipped-mussel.html">Green Lipped Mussel</a>
-<a href="/medicines/green-tea-extract.html">Green Tea Extract</a>
-<a href="/medicines/hawthorn.html">Hawthorn</a>
-<a href="/medicines/holy-basil.html">Holy Basil</a>
-<a href="/medicines/hops.html">Hops</a>
-<a href="/medicines/hydrogen-peroxide.html">Hydrogen Peroxide</a>
-<a href="/medicines/imodium.html">Imodium</a>
-<a href="/medicines/kaopectate.html">Kaopectate</a>
-<a href="/medicines/kava-kava.html">Kava Kava</a>
-<a href="/medicines/l-lysine.html">L-Lysine</a>
-<a href="/medicines/l-theanine.html">L-Theanine</a>
-<a href="/medicines/lecithin.html">Lecithin</a>
-<a href="/medicines/lemon-balm.html">Lemon Balm</a>
-<a href="/medicines/licorice.html">Licorice</a>
-<a href="/medicines/lions-mane.html">Lions Mane</a>
-<a href="/medicines/msm.html">MSM</a>
-<a href="/medicines/maca-root.html">Maca Root</a>
-<a href="/medicines/melatonin.html">Melatonin</a>
-<a href="/medicines/metamucil.html">Metamucil</a>
-<a href="/medicines/milk-thistle.html">Milk Thistle</a>
-<a href="/medicines/motherwort.html">Motherwort</a>
-<a href="/medicines/nettle.html">Nettle</a>
-<a href="/medicines/olive-leaf-extract.html">Olive Leaf Extract</a>
-<a href="/medicines/olive-oil.html">Olive Oil</a>
-<a href="/medicines/papaya.html">Papaya</a>
-<a href="/medicines/passionflower.html">Passionflower</a>
-<a href="/medicines/pedialyte.html">Pedialyte</a>
-<a href="/medicines/pepcid.html">Pepcid</a>
-<a href="/medicines/peppermint.html">Peppermint</a>
-<a href="/medicines/pepto-bismol.html">Pepto-Bismol</a>
-<a href="/medicines/plain-pumpkin.html">Plain Pumpkin</a>
-<a href="/medicines/probiotics.html">Probiotics</a>
-<a href="/medicines/quercetin.html">Quercetin</a>
-<a href="/medicines/red-clover.html">Red Clover</a>
-<a href="/medicines/rehmannia.html">Rehmannia</a>
-<a href="/medicines/reishi-mushroom.html">Reishi Mushroom</a>
-<a href="/medicines/rosehip.html">Rosehip</a>
-<a href="/medicines/rosemary.html">Rosemary</a>
-<a href="/medicines/sarsaparilla.html">Sarsaparilla</a>
-<a href="/medicines/saw-palmetto.html">Saw Palmetto</a>
-<a href="/medicines/schisandra.html">Schisandra</a>
-<a href="/medicines/skullcap.html">Skullcap</a>
-<a href="/medicines/slippery-elm.html">Slippery Elm</a>
-<a href="/medicines/spirulina.html">Spirulina</a>
-<a href="/medicines/stinging-nettle.html">Stinging Nettle</a>
-<a href="/medicines/thyme.html">Thyme</a>
-<a href="/medicines/turmeric.html">Turmeric</a>
-<a href="/medicines/valerian-root.html">Valerian Root</a>
-<a href="/medicines/vitamin-c.html">Vitamin C</a>
-<a href="/medicines/vitamin-e.html">Vitamin E</a>
-<a href="/medicines/wheatgrass.html">Wheatgrass</a>
-<a href="/medicines/yellow-dock.html">Yellow Dock</a>
-<a href="/medicines/yogurt.html">Yogurt</a>
-<a href="/medicines/yucca.html">Yucca</a>
-<a href="/medicines/zyrtec.html">Zyrtec</a>
-                <!-- <a href="/medicines/dexamethasone.html">Dexamethasone</a>  -->
-            </nav>
-        </section>
+        <!-- Tagline -->
+        <h2 class="text-xl mb-8 text-center text-gray-600">Dosage calculator for dog medications</h2>
 
-        <p>Consult with a veterinarian before administering any medication to your pet. ❤️</p>
+        <!-- Search Bar -->
+        <div class="relative w-full max-w-2xl mb-4">
+            <input type="text" id="searchInput" placeholder="Search for a medicine or a symptom" class="w-full p-4 pr-12 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+            <i data-lucide="search" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6"></i>
+            <div id="searchResults" class="search-results hidden"></div>
+        </div>
+
+        <!-- Suggestions -->
+        <div class="flex flex-wrap justify-center gap-2 max-w-2xl">
+            <a href="./medicines/l-theanine.html"><button class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover:bg-green-200">L-Theanine</button></a>
+<a href="./symptoms/stress-relief.html"><button class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover:bg-green-200">Stress Relief</button></a>
+<a href="./symptoms/anxiety.html"><button class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover:bg-green-200">Anxiety</button></a>
+<a href="./symptoms/pain.html"><button class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover:bg-green-200">Pain</button></a>
+<a href="./symptoms/liver-health.html"><button class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover:bg-green-200">Liver Health</button></a>
+<a href="./symptoms/prostate-health.html"><button class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover:bg-green-200">Prostate Health</button></a>
+<a href="./symptoms/night-vision.html"><button class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover:bg-green-200">Night Vision</button></a>
+<a href="./symptoms/digestion.html"><button class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover:bg-green-200">Digestion</button></a>
+<a href="./symptoms/antioxidant-support.html"><button class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover:bg-green-200">Antioxidant Support</button></a>
+<a href="./symptoms/cough.html"><button class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover:bg-green-200">Cough</button></a>
+        </div>
     </main>
 
-    <footer>
-        <p><a href="mailto:woof@dosepaws.com">woof@dosepaws.com</a> <br> &copy; 2024 DosePaws. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-white p-10 text-center text-sm text-gray-600">
+        <p>&copy; 2024 DosePaws. All rights reserved.</p>
+        <p>Contact: <a href="mailto:woof@dosepaws.com">woof@dosepaws.com</a></p>
+        <p class="mt-2">Disclaimer: This website is for informational purposes only. Always consult with a veterinarian before administering medication to your pet. ❤️</p>
     </footer>
+
+    <!-- Bottom Navbar (visible only on small screens) -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white sm:hidden border-t border-gray-300">
+        <div class="flex justify-around items-center h-16">
+            <a href="./index.html" class="text-gray-700 flex flex-col items-center">
+                <i data-lucide="home" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">Home</span>
+            </a>
+            <a href="./calculator.html" class="text-gray-700 flex flex-col items-center">
+                <i data-lucide="calculator" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">Calculator</span>
+            </a>
+            <a href="./medicines/index.html" class="text-gray-700 flex flex-col items-center">
+                <i data-lucide="beaker" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">Medicines</span>
+            </a>
+            <a href="#" class="text-gray-700 flex flex-col items-center" id="moreButton">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">More</span>
+            </a>
+            <div id="moreMenu" class="hidden absolute bottom-16 left-0 right-0 bg-white border border-gray-300 rounded-lg shadow-lg">
+                <a href="./about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
+                <a href="./contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        lucide.createIcons();
+
+        document.getElementById('moreButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            const moreMenu = document.getElementById('moreMenu');
+            moreMenu.classList.toggle('hidden');
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+        let medicines = [];
+
+        // Fetch medicines data
+        fetch('./assets/data/search.json')
+            .then(response => response.json())
+            .then(data => {
+                medicines = data;
+            });
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            if (searchTerm.length < 2) {
+                searchResults.classList.add('hidden');
+                return;
+            }
+
+            const filteredMedicines = medicines.filter(medicine => 
+                medicine.Name.toLowerCase().includes(searchTerm)
+            );
+
+            if (filteredMedicines.length > 0) {
+                searchResults.innerHTML = filteredMedicines.map(medicine => 
+                    `<div class="search-result-item" data-url="${medicine.URL}">${medicine.Name}</div>`
+                ).join('');
+                searchResults.classList.remove('hidden');
+            } else {
+                searchResults.classList.add('hidden');
+            }
+        });
+
+        searchResults.addEventListener('click', function(event) {
+            if (event.target.classList.contains('search-result-item')) {
+                window.location.href = event.target.dataset.url;
+            }
+        });
+
+        // Hide search results when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+                searchResults.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>

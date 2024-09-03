@@ -3,242 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calculate the correct Lecithin dosage for your dog. Learn about uses, precautions, and side effects of Lecithin for dogs.">
-    <meta name="keywords" content="Lecithin for dogs, dog antihistamine, pet allergy medicine, Lecithin dosage calculator">
-    <title>🐾 DosePaws - Lecithin Dosage Calculator for Dogs | Uses and Precautions</title>
-    <link rel="canonical" href="https://www.dosepaws.com/medicines/lecithin.html.html">
+    <title>DosePaws - Lecithin</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="../assets/styles/styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            max-width: 100%;
-            width: 100%;
-            box-sizing: border-box;
-            margin: 0;
-            background-color: #f0f0f0;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-            width: 100%;
-        }
-        h1 {
-            color: #4a4a4a;
-            font-size: 2.5rem;
-            margin-bottom: 0;
-            word-wrap: break-word;
-            max-width: 100%;
-        }
-        .tagline {
-            font-size: 1.2rem;
-            color: #666;
-            margin-top: 5px;
-            word-wrap: break-word;
-            max-width: 100%;
-        }
-        h2, h3 {
-            color: #4a4a4a;
-            text-align: center;
-            margin-bottom: 10px;
-            word-wrap: break-word;
-            max-width: 100%;
-        }
-        h2 {
-            margin-top: 20px;
-        }
-        h3 {
-            margin-top: 15px;
-        }
-        p, ul {
-            margin-top: 0;
-            word-wrap: break-word;
-            max-width: 100%;
-        }
-        .calculator {
-            width: 100%;
-            max-width: 600px;
-            text-align: center;
-            background-color: #e0e0e0;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 0 auto 20px;
-            box-sizing: border-box;
-        }
-        .calculator h2 {
-            margin-top: 0; /* Reduce top margin of h2 inside calculator */
-            margin-bottom: 15px; /* Maintain some space below the heading */
-        }
-        .calculator form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .calculator label {
-            margin-bottom: 10px;
-        }
-        .input-group {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-        input, select {
-            margin: 0 5px;
-            padding: 5px;
-            box-sizing: border-box;
-        }
-        #weight {
-            width: 80px;
-        }
-        #unit {
-            width: 60px;
-        }
-        #result {
-            font-weight: bold;
-            margin-top: 10px;
-            word-wrap: break-word;
-            max-width: 100%;
-            width: 100%;
-        }
-        ul {
-            padding-left: 20px;
-            box-sizing: border-box;
-        }
-        @media (max-width: 768px) {
+        @media (max-width: 640px) {
             body {
-                padding: 10px;
+                padding-bottom: 4rem; /* Add padding to account for bottom navbar */
             }
-            h1 {
-                font-size: 2rem;
-            }
-            .tagline {
-                font-size: 1rem;
-            }
-            h2 {
-                font-size: 1.2rem;
-            }
-            input, select {
-                width: 100%;
-            }
-        }
-        @media (max-width: 480px) {
-            .input-group {
-                flex-direction: column;
-            }
-            input, select {
-                width: 100%;
-                margin: 5px 0;
-            }
-        }
-        
-        article {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        article p {
-            text-align: center;
-            display: inline-block;
-            margin-left: auto;
-            margin-right: auto;
         }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL9M3G91P3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RL9M3G91P3');
+    </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL9M3G91P3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- Top Banner (visible only on small screens) -->
+    <div id="topBanner" class="fixed top-0 left-0 right-0 bg-white border-b border-gray-300 h-16 flex items-center justify-center shadow-md sm:hidden">
+        <a href="../index.html" class="text-gray-700 flex items-center">
+            <img src="../assets/images/logo.png" alt="DosePaws Logo" class="h-12 w-12">
+            <span class="font-semibold text-xl">DosePaws</span>
+        </a>
+    </div>
 
-  gtag('config', 'G-RL9M3G91P3');
-</script>
-<body>
-    <header>
-        <h1><a href="/" style="text-decoration: none; color: inherit;">🐾 DosePaws</a></h1>
-        <p class="tagline">Dose Right, Pawfect Health</p>
-    </header>
+    <!-- Top Navbar (hidden on small screens) -->
+    <nav class="bg-white p-2 hidden sm:block shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex space-x-6">
+                <a href="../index.html" class="text-gray-700 flex items-center">
+                    <img src="../assets/images/logo.png" alt="DosePaws Logo" class="h-12 w-12">
+                    <span class="font-semibold text-xl">DosePaws</span>
+                </a>
+                <a href="../index.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="home" class="w-5 h-5 mr-1"></i> Home
+                </a>
+                <a href="../calculator.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="calculator" class="w-5 h-5 mr-1"></i> Calculator
+                </a>
+                <a href="./index.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="beaker" class="w-5 h-5 mr-1"></i> Medicines
+                </a>
+            </div>
+            <div class="flex space-x-6">
+                
+                <a href="../about.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="info" class="w-5 h-5 mr-1"></i> About
+                </a>
+                <a href="../contact.html" class="text-gray-700 flex items-center">
+                    <i data-lucide="mail" class="w-5 h-5 mr-1"></i> Contact
+                </a>
+            </div>
+        </div>  
+    </nav>
 
-    <main>
-        <section class="calculator">
-            <h2>Lecithin Dosage Calculator for Dogs</h2>
-            <form id="dosage-form">
-                <label for="weight">Dog's Weight:</label>
-                <div class="input-group">
-                    <input type="number" id="weight" min="0" step="0.1" required value="25">
-                    <select id="unit">
-                        <option value="lbs">lbs</option>
-                        <option value="kg">kg</option>
-                    </select>
+    <!-- Main Content -->
+    <main class="flex-grow p-4 container mx-auto mt-16 sm:mt-0">
+        <!-- Wide Card -->
+        <div class="bg-white shadow-md rounded-2xl p-6 mb-8">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <h1 class="text-5xl font-medium text-gray-700 mb-4 sm:mb-0">Lecithin</h1>
+                <div class="flex space-x-2">
+                    <button id="upvoteBtn" class="text-blue-500 px-4 py-2 rounded border border-blue-400 font-semibold flex items-center hover:bg-blue-100 hover:text-blue-700 transition-colors duration-300">
+                        <i data-lucide="thumbs-up" class="w-5 h-5 mr-1"></i> <span class="hidden sm:inline">UPVOTE</span>
+                    </button>
+                    <button id="downvoteBtn" class="text-orange-500 px-4 py-2 rounded border border-orange-400 font-semibold flex items-center hover:bg-orange-100 hover:text-orange-700 transition-colors duration-300">
+                        <i data-lucide="thumbs-down" class="w-5 h-5 mr-1"></i> <span class="hidden sm:inline">DOWNVOTE</span>
+                    </button>
+                    <a href="../contact.html">
+                        <button class="text-gray-500 px-4 py-2 rounded border border-gray-400 font-semibold flex items-center hover:bg-gray-100 hover:text-gray-700 transition-colors duration-300">
+                            <i data-lucide="pencil" class="w-5 h-5 mr-1"></i> <span class="hidden sm:inline">EDIT</span>
+                        </button>
+                    </a>
                 </div>
-            </form>
-            <div id="result"></div>
-        </section>
+            </div>
+            <p class="text-lg mt-4 text-gray-700">Lecithin is a supplement used to support liver health and improve skin and coat condition in dogs, often used in cases of fatty liver disease.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4 gap-4">
+                <div class="col-span-1 rounded-lg p-6 border border-green-400 bg-green-50">
+                    <h2 class="text-base font-bold mb-1 text-green-900">DOSAGE CALCULATOR</h2>
+                    <p id="dosage-text" class="text-base text-green-800">(5-10 mg/kg daily)</p>
+                    
+                    <form id="dosage-form" class="mt-4">
+                        <label for="weight" class="text-base text-green-800 font-semibold">Dog's Weight:</label>
+                        <div class="flex items-center mt-2">
+                            <input type="number" id="weight" min="0" step="0.1" required value="25" class="h-8 w-24 p-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <select id="unit" class="h-8 ml-2 p-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                                <option value="lbs">lbs</option>
+                                <option value="kg">kg</option>
+                            </select>
+                        </div>
+                    </form>
+                    <p id="dosage-result" class="text-base text-green-800 font-semibold mt-4"></p>
+                    
+                </div>
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="col-span-1 p-6 pt-3 pb-3 rounded-lg border border-yellow-400 bg-yellow-50 transition-colors duration-300">
+                        <h2 class="text-base font-semibold mb-1 text-gray-700">PRECAUTIONS</h2>
+                        <p class="text-base text-gray-600">Consult a vet before use if the dog has a history of liver or pancreatic issues.</p>
+                    </div>
+                    <div class="col-span-1 p-6 pt-3 pb-3">
+                        <h2 class="text-base font-semibold mb-1 text-gray-700">USES</h2>
+                            <ul class="list-none text-base text-gray-600">
+                                <li class="text-blue-600 hover:underline mb-1"><a href="../symptoms/liver-health.html">Liver Health</a></li>
+<li class="text-blue-600 hover:underline mb-1"><a href="../symptoms/skin-health.html">Skin Health</a></li>
+<li class="text-blue-600 hover:underline mb-1"><a href="../symptoms/coat-condition.html">Coat Condition</a></li>
+                            </ul>
+                    </div>
+                    <div class="col-span-1 p-6 pt-3 pb-3 rounded-lg border border-red-400 bg-red-50 transition-colors duration-300">
+                        <h2 class="text-base font-semibold mb-1 text-gray-700">POTENTIAL SIDE EFFECTS</h2>
+                            <ul class="list-none text-base text-gray-600">
+                                <li>Diarrhea</li>
+<li>Stomach Upset</li>
+<li>Allergic Reaction</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Smaller Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white shadow-md rounded-2xl p-6 mb-8">
+            <a href="../symptoms/liver-health.html"><h2 class="text-base font-semibold mb-3 text-gray-700 flex items-center">Remedies for Liver Health<i data-lucide="external-link" class="w-5 h-5 ml-1"></i></h2></a>
+            <ul class="list-none text-base text-gray-600">
+                <li class="text-blue-600 hover:underline mb-1"><a href="./artichoke-leaf.html">Artichoke Leaf</a></li>
+<li class="text-blue-600 hover:underline mb-1"><a href="./burdock-root.html">Burdock Root</a></li>
+<li class="text-blue-600 hover:underline mb-1"><a href="./dandelion-root.html">Dandelion Root</a></li>
+            </ul>
+        </div>
+        </div>
 
-        <article>
-            <h2>About Lecithin for Dogs 💊🐶</h2>
-            <section>
-                <h3>Description</h3>
-                <p>Lecithin is a supplement used to support liver health and improve skin and coat condition in dogs, often used in cases of fatty liver disease.</p>
-            </section>
-
-            <section>
-                <h3>Dosage</h3>
-                <p>5-10 mg/kg daily</p>
-            </section>
-
-            <section>
-                <h3>Precautions</h3>
-                <p>Consult a vet before use if the dog has a history of liver or pancreatic issues.</p>
-            </section>
-
-            <section>
-                <h3>Uses</h3>
-                <p>Liver Health<br>Skin Health<br>Coat Condition</p>
-            </section>
-
-            <section>
-                <h3>Potential Side Effects</h3>
-                <p>Diarrhea<br>Stomach Upset<br>Allergic Reaction</p>
-            </section>
-        </article>
-
-        <p><strong>Note:</strong> Always consult with a veterinarian before administering any medication to your pet. ❤️</p>
     </main>
 
-    <footer style="text-align: center;">
-        <p><a href="mailto:woof@dosepaws.com">woof@dosepaws.com</a> <br> &copy; 2024 DosePaws. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-white p-10 text-center text-sm text-gray-600 shadow-md mt-10">
+        <p>&copy; 2024 DosePaws. All rights reserved.</p>
+        <p>Contact: <a href="mailto:woof@dosepaws.com">woof@dosepaws.com</a></p>
+        <p class="mt-2">Disclaimer: This website is for informational purposes only. Always consult with a veterinarian before administering medication to your pet. ❤️</p>
     </footer>
 
+    <!-- Bottom Navbar (visible only on small screens) -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white sm:hidden border-t border-gray-300">
+        <div class="flex justify-around items-center h-16">
+            <a href="../index.html" class="text-gray-700 flex flex-col items-center">
+                <i data-lucide="home" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">Home</span>
+            </a>
+            <a href="../calculator.html" class="text-gray-700 flex flex-col items-center">
+                <i data-lucide="calculator" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">Calculator</span>
+            </a>
+            <a href="./index.html" class="text-gray-700 flex flex-col items-center">
+                <i data-lucide="beaker" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">Medicines</span>
+            </a>
+            <a href="#" class="text-gray-700 flex flex-col items-center" id="moreButton">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">More</span>
+            </a>
+            <div id="moreMenu" class="hidden absolute bottom-16 left-0 right-0 bg-white border border-gray-300 rounded-lg shadow-lg">
+                <a href="../about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
+                <a href="../contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+            </div>
+        </div>
+    </nav>
+
     <script>
+        lucide.createIcons();
+
+        document.getElementById('moreButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            const moreMenu = document.getElementById('moreMenu');
+            moreMenu.classList.toggle('hidden');
+        });
+
+        const details = {
+            Name: "Lecithin",
+            DosageUnit: "mg",
+            DosageText: "5-10 mg/kg daily"
+        };
+
         function calculateDosage() {
             const weight = parseFloat(document.getElementById('weight').value);
             const unit = document.getElementById('unit').value;
-            const resultDiv = document.getElementById('result');
 
-            if (isNaN(weight) || weight <= 0) {
-                resultDiv.textContent = "Please enter a valid weight.";
-                return;
+            if (weight > 0) {
+                let weightInKg = unit === 'lbs' ? weight * 0.453592 : weight;
+                const dosage =  weightInKg * 7.5;
+
+                document.getElementById('dosage-result').innerHTML = `The recommended ${details.Name} dosage is: <span class="bg-green-200 text-green-900 px-1 py-0.5 rounded-md">${dosage.toFixed(2)} ${details.DosageUnit}</span>, for a <span class="bg-green-200 text-green-900 px-1 py-0.5 rounded-md">${weight} ${unit}</span> dog`;
             }
-
-            let weightInKg = unit === 'lbs' ? weight * 0.453592 : weight;
-            let dosageMg = weightInKg * 7.5;
-
-            resultDiv.textContent = `The recommended Lecithin dosage is: ${dosageMg.toFixed(2)} mg, for a ${weight} ${unit} dog`;
         }
 
-        // Add event listeners to input and select elements
+        // Initial calculation
+        calculateDosage();
+
+        // Add event listeners
         document.getElementById('weight').addEventListener('input', calculateDosage);
         document.getElementById('unit').addEventListener('change', calculateDosage);
 
-        // Call calculateDosage on page load to show initial result
-        window.onload = calculateDosage;
+        // Voting functionality
+        const medicineName = "lecithin.html";
+        const upvoteBtn = document.getElementById('upvoteBtn');
+        const downvoteBtn = document.getElementById('downvoteBtn');
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = `expires=${date.toUTCString()}`;
+            document.cookie = `${name}=${value};${expires};path=/`;
+        }
+
+        function sendVoteRequest(action) {
+            return fetch(`https://counter.abinthomas.in/counter/increment?project=dosepaws&property=${medicineName}-${action}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                });
+        }
+
+        function updateButtonStyles() {
+            const voteStatus = getCookie(`${medicineName}-vote`);
+            upvoteBtn.classList.toggle('bg-blue-500', voteStatus === 'upvote');
+            upvoteBtn.classList.toggle('text-white', voteStatus === 'upvote');
+            downvoteBtn.classList.toggle('bg-orange-500', voteStatus === 'downvote');
+            downvoteBtn.classList.toggle('text-white', voteStatus === 'downvote');
+        }
+
+        function showToast(message, type) {
+            Toastify({
+                text: message,
+                duration: 3000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                backgroundColor: type === 'success' ? "#4CAF50" : "#F44336",
+            }).showToast();
+        }
+
+        function handleVote(voteType) {
+            const currentVote = getCookie(`${medicineName}-vote`);
+            let actions = [];
+
+            if (currentVote === voteType) {
+                // Undo the current vote
+                actions.push(`${voteType}-undo`);
+            } else {
+                if (currentVote) {
+                    // Undo the previous vote
+                    actions.push(`${currentVote}-undo`);
+                }
+                // Add the new vote
+                actions.push(voteType);
+            }
+
+            Promise.all(actions.map(sendVoteRequest))
+                .then(() => {
+                    if (currentVote === voteType) {
+                        setCookie(`${medicineName}-vote`, '', -1);
+                        showToast('Vote removed successfully!', 'success');
+                    } else {
+                        setCookie(`${medicineName}-vote`, voteType, 365);
+                        showToast('Vote recorded successfully!', 'success');
+                    }
+                    updateButtonStyles();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showToast('Failed to register vote. Please try again.', 'error');
+                });
+        }
+
+        upvoteBtn.addEventListener('click', () => handleVote('upvote'));
+        downvoteBtn.addEventListener('click', () => handleVote('downvote'));
+
+        // Initialize button styles
+        updateButtonStyles();
     </script>
 </body>
 </html>
